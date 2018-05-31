@@ -35,8 +35,6 @@ html, body, #root, .app {
     @media screen and (max-width: 576px) {
       .app .edit {
         display: none; } }
-  .app #push {
-    height: 100px; }
   .app .container {
     background: white;
     min-height: 100%;
@@ -63,7 +61,7 @@ html, body, #root, .app {
     .app .container .message-box {
       scroll-behavior: smooth;
       background: white;
-      height: 75vh;
+      height: 72vh;
       overflow-y: scroll; }
       .app .container .message-box .bot-message, .app .container .message-box .user-message {
         padding: 5px 5px;
@@ -119,7 +117,7 @@ html, body, #root, .app {
           background: white; }
         .app .container .message-box .bot-message .markers {
           display: flex;
-          padding: 5px;
+          padding: 5px 16%;
           flex-wrap: wrap;
           justify-content: flex-start; }
           .app .container .message-box .bot-message .markers div {

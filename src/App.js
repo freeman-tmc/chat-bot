@@ -17,7 +17,8 @@ class App extends Component {
         super(props);
         this.state = {
             data: [],
-            inputValue: ''
+            inputValue: '',
+            connecting: true
         }
     }
 
@@ -25,11 +26,10 @@ class App extends Component {
         this.props.socket.on('bot message', msg => {
             this.setState({
                 data: [...this.state.data, { text: msg.message.text, source: 'bot', time: new Date(), options: msg.message.options }],
+                connecting: false
             });
         });
     }
-
-
 
     handleChange = (event) => {
         let userInput = event.target.value;
@@ -39,20 +39,21 @@ class App extends Component {
     }
 
     handlePress = (event) => {
-        if (event.key === 'Enter' && event.target.value !== '') {
-            this.sendMessage();
+        if (event.key === 'Enter' && event.target.value) {
+            this.sendMessage('enter');
         }
     }
 
 
     sendMessage = (event) => {
-        let userMessage = { text: this.state.inputValue };
-        this.props.socket.emit('send message', userMessage);
-        this.setState({
-            data: [...this.state.data, { text: this.state.inputValue, source: 'user', time: new Date(), options: [] }],
-            inputValue: ''
-        })
-       
+        if(event === 'enter' || this.state.inputValue) {
+            let userMessage = { text: this.state.inputValue };
+            this.props.socket.emit('send message', userMessage);
+            this.setState({
+                data: [...this.state.data, { text: this.state.inputValue, source: 'user', time: new Date(), options: [] }],
+                inputValue: ''
+            })
+        }
     }
 
     componentDidUpdate() {
@@ -75,15 +76,16 @@ class App extends Component {
                         <h2>SPARTANS</h2>
                     </header>
                     <div className="message-box">
-                    {this.state.data.map((el, i) => {
+                    {!this.state.connecting ?
+                    (this.state.data.map((el, i) => {
                         if (el.source === 'bot') {
                             return <BotMessage {...el} key={i} />
                         } else {
                             return <UserMessage {...el} key={i} />
                         }
-                    })}
+                    })
+                    ) : <p>Connecting...</p>}
                     </div>
-                    <div id="push"></div>
                 </div>
                 <div className="controls">
                 <div className="compose-message">

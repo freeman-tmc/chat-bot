@@ -41,9 +41,7 @@ html, body, #root, .app {
             display: none;
         }
     }
-    #push {
-        height: 100px;
-    }
+    
     .container {
         background: white;
         min-height: 100%;
@@ -73,7 +71,7 @@ html, body, #root, .app {
         .message-box {
             scroll-behavior: smooth;
             background: white;
-            height: 75vh;
+            height: 72vh;
             overflow-y: scroll;
             .bot-message, .user-message {
                 padding: 5px 5px;
@@ -141,7 +139,7 @@ html, body, #root, .app {
                 }
                 .markers {
                     display: flex;
-                    padding: 5px;
+                    padding: 5px 16%;
                     flex-wrap: wrap;
                     justify-content: flex-start;
                     div {
