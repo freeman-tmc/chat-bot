@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="11px" viewBox="0 0 59 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo original</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Chatbot-web-interface-white-Copy" transform="translate(-856.000000, -1145.000000)" fill="#0976F0" fill-rule="nonzero">
+            <g id="Group-4" transform="translate(511.000000, 1142.000000)">
+                <g id="powered" transform="translate(262.000000, 0.000000)">
+                    <g id="Logo-original" transform="translate(83.000000, 3.000000)">
+                        <path d="M5.62962963,0 L8,0 L8,7.43243243 C8,9.35330556 6.34112225,11 3.85185185,11 C1.94627245,11 0.566523606,9.92721507 0,8.62162162 L1.77777778,7.72972973 C2.08679065,8.66015266 3.13082181,9.21621622 3.85185185,9.21621622 C4.84756,9.21621622 5.62962963,8.64798496 5.62962963,7.43243243 L5.62962963,0 Z" id="J"></path>
+                        <polygon id="E" points="20 0 20 1.78378378 12.2857143 1.78378378 12.2857143 5.94594595 17.4285714 5.94594595 16.8571429 7.72972973 12.2857143 7.72972973 12.2857143 9.21621622 20 9.21621622 20 11 10 11 10 0"></polygon>
+                        <path d="M29.4285714,6.22924658 L29.4285714,8.73396997 L24,4.24693042 L24,11 L22,11 L22,0 L29.4285714,6.22924658 Z M30,0 L32,0 L32,11 L30,9.27421556 L30,0 Z" id="N"></path>
+                        <path d="M41.4285714,6.24324324 L41.4285714,8.62162162 L36,4.24693042 L36,11 L34,11 L34,0 L41.4285714,6.24324324 Z M42,0 L44,0 L44,11 L42,9.27421556 L42,0 Z" id="N-Copy"></path>
+                        <g id="Group" transform="translate(45.000000, 0.000000)">
+                            <path d="M7,0 L14,11 L0,11 L7,0 Z M7,3.56756757 L3.34782609,9.21621622 L10.3478261,9.21621622 L7,3.56756757 Z" id="A"></path>
+                            <ellipse id="Oval" cx="7" cy="7.43243243" rx="1" ry="1"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

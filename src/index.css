@@ -1,5 +1,219 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
+
+html, body, #root, .app {
+  background: #f3f3f3;
+  height: 100%; }
+
+.app {
+  position: relative; }
+  .app .avatar-box {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    border: 2px solid #3778f0;
+    border-radius: 50%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-content: center; }
+    @media screen and (max-width: 576px) {
+      .app .avatar-box {
+        display: none; } }
+    .app .avatar-box img {
+      width: 60%; }
+  .app .edit {
+    position: absolute;
+    left: 21%;
+    top: 10px;
+    background: white;
+    width: 20px; }
+    @media screen and (max-width: 576px) {
+      .app .edit {
+        display: none; } }
+  .app #push {
+    height: 100px; }
+  .app .container {
+    background: white;
+    min-height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 5%;
+    margin-bottom: -15vh; }
+    @media screen and (max-width: 576px) {
+      .app .container {
+        width: 100%; } }
+    .app .container header {
+      padding: 15px 0; }
+      .app .container header img {
+        display: inline-block;
+        width: 25px;
+        vertical-align: middle; }
+      .app .container header h2 {
+        display: inline-block;
+        width: fit-content;
+        font-size: 0.8em; }
+    .app .container .message-box {
+      scroll-behavior: smooth;
+      background: white;
+      height: 75vh;
+      overflow-y: scroll; }
+      .app .container .message-box .bot-message, .app .container .message-box .user-message {
+        padding: 5px 5px;
+        text-align: left; }
+        .app .container .message-box .bot-message .user-image, .app .container .message-box .user-message .user-image {
+          width: 46px;
+          height: 46px;
+          background: #ecfaf9;
+          border-radius: 50%;
+          display: inline-block;
+          vertical-align: top; }
+          .app .container .message-box .bot-message .user-image img, .app .container .message-box .user-message .user-image img {
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 18px; }
+        .app .container .message-box .bot-message p, .app .container .message-box .user-message p {
+          display: inline-block;
+          max-width: 60%;
+          font-size: 0.9em;
+          padding: 15px;
+          background: #ecfaf9;
+          border-radius: 20px; }
+      .app .container .message-box .user-message {
+        animation: fadein 0.3s ease-in;
+        text-align: right; }
+        .app .container .message-box .user-message p {
+          margin-right: 5%;
+          background: #ecfaf9;
+          vertical-align: top;
+          text-align: left; }
+      .app .container .message-box .bot-message {
+        animation: fadein 0.3s ease-in; }
+        .app .container .message-box .bot-message .bot-image {
+          display: inline-block;
+          width: 46px;
+          height: 46px;
+          background: #ecfaf9;
+          border-radius: 50%;
+          vertical-align: top; }
+          .app .container .message-box .bot-message .bot-image .img-box {
+            margin-top: 11px;
+            margin-left: 3px; }
+            .app .container .message-box .bot-message .bot-image .img-box h2 {
+              font-size: 0.1em;
+              display: inline-block; }
+            .app .container .message-box .bot-message .bot-image .img-box img {
+              display: inline-block;
+              width: 10%; }
+        .app .container .message-box .bot-message p {
+          margin-left: 5%;
+          border: 1px solid #ecfaf9;
+          background: white; }
+        .app .container .message-box .bot-message .markers {
+          display: flex;
+          padding: 5px;
+          flex-wrap: wrap;
+          justify-content: flex-start; }
+          .app .container .message-box .bot-message .markers div {
+            background: #3778f0;
+            border-radius: 50%;
+            color: white;
+            width: 48px;
+            height: 48px;
+            margin: 3px 5px;
+            text-align: center;
+            line-height: 48px; }
+  .app .controls {
+    height: 15vh; }
+    .app .controls .compose-message {
+      max-width: 800px;
+      width: 50%;
+      height: 40px;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 5%;
+      box-sizing: border-box; }
+      @media screen and (max-width: 576px) {
+        .app .controls .compose-message {
+          width: 100%; } }
+      .app .controls .compose-message .menu-icon {
+        display: inline-block;
+        width: 10%;
+        border: 1px solid #3778f0;
+        height: 100%;
+        box-sizing: border-box;
+        vertical-align: bottom;
+        box-shadow: 0 0 3px 1px #3778f0;
+        border-radius: 3px 0 0 3px; }
+        .app .controls .compose-message .menu-icon img {
+          display: block;
+          height: 20px;
+          width: 60%;
+          margin: 0 auto;
+          margin-top: 9px; }
+      .app .controls .compose-message input {
+        display: inline-block;
+        width: 70%;
+        border-top: 1px solid #3778f0;
+        border-bottom: 1px solid #3778f0;
+        border-left: none;
+        border-right: none;
+        height: 100%;
+        box-sizing: border-box;
+        vertical-align: bottom;
+        box-shadow: 0 0 3px 1px #3778f0;
+        padding-left: 5px; }
+      .app .controls .compose-message button {
+        display: inline-block;
+        width: 20%;
+        border: 1px solid #3778f0;
+        height: 100%;
+        box-sizing: border-box;
+        vertical-align: bottom;
+        background: #3778f0;
+        color: white;
+        box-shadow: 0 0 3px 1px #3778f0;
+        border-radius: 0 3px 3px 0; }
+        .app .controls .compose-message button img {
+          margin-left: 10%;
+          vertical-align: text-bottom; }
+    .app .controls footer {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 5%;
+      margin-top: 5px; }
+      .app .controls footer p {
+        width: fit-content;
+        display: inline-block;
+        border-right: 1px solid grey;
+        padding: 0 1% 0 1%;
+        font-size: 0.6em; }
+        .app .controls footer p:last-child {
+          border: none;
+          color: grey; }
+          .app .controls footer p:last-child img {
+            margin-left: 5px; }
+      @media screen and (max-width: 576px) {
+        .app .controls footer {
+          width: fit-content; } }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=index.css.map */
