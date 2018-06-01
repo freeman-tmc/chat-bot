@@ -69,6 +69,10 @@ html, body, #root, .app {
             }
         }
         .message-box {
+            p {
+                margin-top: 20px;
+                color: grey;
+            }
             scroll-behavior: smooth;
             background: white;
             height: 72vh;
@@ -128,7 +132,8 @@ html, body, #root, .app {
                         }
                         img {
                             display: inline-block;
-                            width: 10%;
+                            width: 15%;
+                            vertical-align: text-bottom;
                         }
                     }
                 }

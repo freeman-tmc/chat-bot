@@ -63,6 +63,9 @@ html, body, #root, .app {
       background: white;
       height: 72vh;
       overflow-y: scroll; }
+      .app .container .message-box p {
+        margin-top: 20px;
+        color: grey; }
       .app .container .message-box .bot-message, .app .container .message-box .user-message {
         padding: 5px 5px;
         text-align: left; }
@@ -110,7 +113,8 @@ html, body, #root, .app {
               display: inline-block; }
             .app .container .message-box .bot-message .bot-image .img-box img {
               display: inline-block;
-              width: 10%; }
+              width: 15%;
+              vertical-align: text-bottom; }
         .app .container .message-box .bot-message p {
           margin-left: 5%;
           border: 1px solid #ecfaf9;
